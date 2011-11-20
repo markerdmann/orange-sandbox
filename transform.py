@@ -2,7 +2,7 @@ import csv
 
 r = csv.reader(open('training.csv'))
 rows = [x for x in r]
-rows = rows[35000:40000]
+rows = rows[1:35000]
 
 words = set()
 for row in rows:
@@ -33,7 +33,7 @@ for row in rows:
     new_row.append(row[9])
     new_rows.append(new_row)
     
-with open('test.tab', 'w') as f:
+with open('training.tab', 'w') as f:
     w = csv.writer(f, delimiter='\t')
     w.writerows(new_rows)
 

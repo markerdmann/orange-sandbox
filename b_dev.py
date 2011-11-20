@@ -1,7 +1,7 @@
 import orange
 import orngEnsemble
 
-training_data = orange.ExampleTable('training_tiny.tab')
+training_data = orange.ExampleTable('training.tab')
 print 'training data loaded'
 forest = orngEnsemble.RandomForestLearner(examples=training_data, trees=100, name="forest")
 print 'forest trained'
